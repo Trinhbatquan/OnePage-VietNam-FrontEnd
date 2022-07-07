@@ -1,0 +1,240 @@
+/*Pc */
+
+@media (min-width: 64em) {
+    .slider1,
+    .slider2,
+    .slider3,
+    .slider4 {
+        height: 950px;
+    }
+}
+
+
+/* 1024 */
+
+
+/* tablet */
+
+@media (min-width: 46.25em) and (max-width: 63.9375em) {
+    /* 740 va 1023 */
+    .contact-content {
+        height: 153px;
+    }
+    .slider3 .text-description {
+        margin-left: 4px;
+    }
+    .slider4 .text-description {
+        margin-left: 4px;
+    }
+}
+
+
+/* tablet and mobile */
+
+@media (max-width: 63.9375em) {
+    .place-buy-btn {
+        padding: 15px 16px;
+    }
+    .contact-form .form-control {
+        padding: 15px;
+    }
+    .contact-submit-btn {
+        font-size: 18px;
+    }
+    #footer .copyright {
+        font-size: 35px;
+        padding: 40px;
+        display: inline-block;
+        /* de cho chu lui xuong (de inline nhu mac dinh thi k the padding duoc) */
+        /* inline cho phan tu cung 1 hang nhung khong the padding hay margin dc */
+    }
+    #footer .social-list a {
+        font-size: 35px;
+        padding: 25px;
+    }
+    #footer .social-list .ti-facebook:hover {
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 32px;
+    }
+    #footer .social-list .ti-instagram:hover {
+        font-size: 32px;
+        color: rgba(0, 0, 0, 0.5);
+    }
+    #footer .social-list .ti-youtube:hover {
+        font-size: 32px;
+        color: rgba(0, 0, 0, 0.5);
+    }
+    #footer .social-list .ti-pinterest:hover {
+        font-size: 32px;
+        color: rgba(0, 0, 0, 0.5);
+    }
+    #footer .social-list .ti-linkedin:hover {
+        font-size: 32px;
+        color: rgba(0, 0, 0, 0.5);
+    }
+    #footer .social-list .ti-github:hover {
+        font-size: 32px;
+        color: rgba(0, 0, 0, 0.5);
+    }
+    .contact-info {
+        line-height: 2.0;
+    }
+}
+
+
+/* mobile */
+
+@media (max-width: 46.1875em) {
+    /* 739px */
+    .small-full-width {
+        width: 100% !important;
+    }
+    .small-col-full {
+        width: 100% !important;
+    }
+    .small-mt-8 {
+        margin-top: 8px !important;
+    }
+    #header {
+        opacity: 1;
+    }
+    #header .mobile-menu-btn {
+        display: block;
+    }
+    #header .buttonSearch {
+        display: none;
+    }
+    #header {
+        overflow: hidden;
+    }
+    #heading>li {
+        display: block;
+    }
+    #heading>li:first-child {
+        display: inline-block;
+    }
+    #heading {
+        display: block;
+    }
+    #heading>li>a {
+        display: block;
+    }
+    #heading .subHeading {
+        position: initial;
+        background-color: black;
+        opacity: 1;
+        margin-top: 1px;
+    }
+    #heading .subHeading a {
+        color: white;
+        padding: 0 41px;
+    }
+    #heading li a {
+        font-size: 15px;
+        padding: 1px 24px;
+    }
+    #heading>li:hover>a {
+        border-radius: 0%;
+        background-color: #ccc;
+        color: black;
+        font-size: 15px;
+    }
+    #heading .subHeading li:hover {
+        background-color: rgb(240, 163, 163);
+        border-radius: 0%;
+    }
+    #heading .subHeading li:hover a {
+        color: black;
+    }
+    .slider1,
+    .slider2,
+    .slider3,
+    .slider4 {
+        height: 300px;
+        background-size: cover;
+    }
+    /* slider mobile */
+    .slider1 .text-content,
+    .slider2 .text-content,
+    .slider3 .text-content,
+    .slider4 .text-content {
+        bottom: 3px;
+    }
+    .slider1 .text-heading,
+    .slider2 .text-heading,
+    .slider3 .text-heading,
+    .slider4 .text-heading {
+        font-size: 18px;
+    }
+    .slider1 .text-description {
+        font-size: 9px;
+        margin-top: 8px;
+        margin-left: 32px;
+        margin-bottom: 10px;
+        color: white;
+        font-style: oblique;
+        font-weight: normal;
+    }
+    .slider2 .text-description {
+        font-size: 9px;
+        margin-top: 8px;
+        margin-left: 28px;
+        margin-bottom: 10px;
+        color: white;
+        font-style: oblique;
+        font-weight: normal;
+    }
+    .slider3 .text-description {
+        font-size: 9px;
+        margin-top: 4px;
+        margin-left: 10px;
+        margin-bottom: 10px;
+        color: white;
+        font-style: oblique;
+        font-weight: normal;
+    }
+    .slider4 .text-description {
+        font-size: 9px;
+        margin-top: 8px;
+        margin-left: 10px;
+        margin-bottom: 10px;
+        color: white;
+        font-style: oblique;
+        font-weight: normal;
+    }
+    /* content responsive mobile */
+    #content .member-avatar {
+        width: 60%;
+        height: auto;
+    }
+    .contact-form {
+        margin-top: 32px;
+    }
+    .contact-content {
+        height: 338px;
+    }
+    #footer .social-list a {
+        font-size: 35px;
+        padding: 10px;
+        padding-top: 15px;
+        margin-top: 10px;
+    }
+    #footer .social-list .ti-instagram {
+        display: none;
+    }
+    #footer .social-list .ti-pinterest {
+        display: none;
+    }
+    /* #footer .social-list .ti-linkedin {
+        display: none;
+    } */
+    /* mobile map section */
+    .map-section {
+        width: 100%;
+        height: 550px;
+    }
+    .map-VN {
+        width: 100%;
+        height: 550px;
+    }
+}

@@ -1,0 +1,791 @@
+/* reset css */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/*
+1. Từ ngoài vào trong
+2.Từ trên xuống dưới
+3.Tổng quan đến chi tiết
+
+1.Vị trí
+2.Kích thước
+3.Màu sắc
+4.Kiểu dáng(kiểu chữ, hình tròn, vuông) */
+
+
+/* khắc phục tình trạng float: left ở member-list */
+
+.clear {
+    clear: both;
+}
+
+.text-white {
+    color: white !important;
+}
+
+.col {
+    float: left;
+    /* tro thanh the inline, the inline khi padding se nam duoi( de len
+    the block =>fix: chuyen thanh inline-block ==> buy-ticket-btn*/
+    padding: 0 8px;
+}
+
+.row {
+    margin-left: -8px;
+    margin-right: -8px;
+}
+
+.col-third {
+    width: 33.333333%;
+}
+
+.col-half {
+    width: 50%;
+}
+
+.col-full {
+    width: 100%;
+}
+
+.text-center {
+    text-align: center !important;
+}
+
+.marginTop-8 {
+    margin-top: 8px !important;
+}
+
+.marginTop-16 {
+    margin-top: 16px !important;
+}
+
+.marginTop-32 {
+    margin-top: 32px !important;
+}
+
+#main {}
+
+#header {
+    /* cho header đứng yên khi kéo */
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    --height: 46px;
+    width: 100%;
+    height: var(--height);
+    background-color: black;
+    opacity: 0.8;
+    z-index: 1;
+    /* overflow: hidden; */
+}
+
+#heading {
+    display: inline-block;
+    /*cùng 1 hàng + k kế thừa chiều ngang của header nên heading có
+                        chiều ngang = tổng chiều ngang của các thẻ li */
+}
+
+#heading li {
+    display: inline-block;
+    /*cùng 1 hàng nhưng không kế thừa chiều ngang của heading vì vậy
+                        ở đây mỗi thẻ li đều có chiều ngang = chiều ngang của vật thể*/
+    position: relative;
+}
+
+#heading .subHeading {
+    min-width: 200px;
+    display: none;
+    /* margin: 2px; */
+    margin-top: 1px;
+    background-color: white;
+    border-radius: 15px;
+    position: absolute;
+    /* cố định top va left của subHeading so voi More dùng apsolute */
+    top: 100%;
+    left: 0;
+    /* đổ bóng */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+}
+
+#heading .subHeading li {
+    width: 100%;
+    /* display:block để li ở subHeading kế thừa hết chiều ngang của subHeading */
+    padding: 0 0 0 1px;
+    height: 38px;
+}
+
+#heading .subHeading a {
+    color: black;
+    padding: 0 16px 0 8px;
+    line-height: 38px;
+}
+
+#heading>li>a {
+    color: white;
+    text-transform: uppercase;
+}
+
+#heading li a {
+    display: inline-block;
+    /* height(a) == height(li) */
+    text-decoration: none;
+    line-height: var(--height);
+    padding: 0 24px;
+    font-size: 18px;
+}
+
+#heading>li:hover>a {
+    background-color: #ccc;
+    border-radius: 15px;
+    color: black;
+    font-size: 22px;
+}
+
+#heading .subHeading li:hover {
+    background-color: rgb(245, 116, 116);
+    border-radius: 15px;
+}
+
+#heading li:hover .subHeading {
+    /* css cho subHeading la con cua li ma li la con cua heading */
+    display: block;
+}
+
+#heading .buttonDownAngle {
+    /* mặc định là 16px */
+    font-size: 16px;
+}
+
+#heading li:hover .buttonDownAngle {
+    font-size: 18px;
+}
+
+#header .mobile-menu-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: none;
+}
+
+#header .mobile-menu-btn,
+#header .buttonSearch {
+    /* dieu chinh weight của buttonSearch */
+    float: right;
+    padding: 0 21px;
+    border-radius: 15px;
+}
+
+#header .mobile-menu-btn:hover .menu-icon,
+#header .buttonSearch:hover .buttonTi-search {
+    font-size: 24px;
+    color: black;
+}
+
+#header .mobile-menu-btn:hover {
+    background-color: #ccc;
+}
+
+#header .buttonSearch:hover {
+    background-color: red;
+    cursor: pointer;
+}
+
+#header .menu-icon,
+#header .buttonTi-search {
+    color: white;
+    font-size: 20px;
+    line-height: 46px;
+}
+
+
+/* 50% của chính nó */
+
+.slider1 {
+    /* --height: 46px;
+    margin-top: var(--height); */
+    height: 500px;
+    width: 100%;
+    background-image: url('../img/places/background1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.slider2 {
+    /* --height: 46px;
+    margin-top: var(--height); */
+    height: 500px;
+    width: 100%;
+    background-image: url('../img/places/place6.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.slider3 {
+    /* --height: 46px;
+    margin-top: var(--height); */
+    height: 500px;
+    width: 100%;
+    background-image: url('../img/places/place5.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.slider4 {
+    /* --height: 46px;
+    margin-top: var(--height); */
+    height: 500px;
+    width: 100%;
+    background-image: url('../img/places/places1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.slider2 .text-content {
+    margin-left: 7px;
+    position: absolute;
+    bottom: 15px;
+    color: rgb(199, 224, 231);
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.slider3 .text-content {
+    margin-left: 7px;
+    position: absolute;
+    bottom: 15px;
+    color: rgb(199, 224, 231);
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.slider3 .text-description {
+    margin-top: 25px;
+    font-size: 13px;
+    font-weight: 700;
+    margin-left: 20px;
+    text-shadow: 0 0 2px black;
+}
+
+.slider1 .text-content,
+.slider4 .text-content {
+    position: absolute;
+    bottom: 15px;
+    color: rgb(199, 224, 231);
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.slider1 .text-heading,
+.slider2 .text-heading,
+.slider3 .text-heading,
+.slider4 .text-heading {
+    text-align: center;
+    font-weight: 400;
+    font-size: 24px;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+.slider1 .text-description,
+.slider2 .text-description,
+.slider4 .text-description {
+    margin-top: 25px;
+    font-size: 13px;
+    font-weight: bolder;
+    margin-left: 20px;
+    text-shadow: 0 0 2px #000;
+}
+
+
+/* fix loi kho nhin chu */
+
+
+/* do bong */
+
+
+/* #slider .text-content:hover .text-heading {
+    color: rgb(201, 235, 167);
+    font-size: 23px; 
+     font-style: oblique;
+}
+
+#slider .text-content:hover .text-description {
+    color: rgb(201, 235, 167);
+    font-size: 15px;
+     font-style: oblique; 
+} */
+
+
+/* slide fix sticky */
+
+.image-slider {
+    --height: 46px;
+    margin-top: var(--height);
+    /* display: grid;
+    grid-template-columns: repeat(4, 1ft);
+    grid-gap: 20px;
+    align-items: center; */
+}
+
+
+/* .image {
+    height: 500px;
+    margin-top: 20px;
+}
+
+.image-item {
+    position: relative;
+}
+
+.image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.image-title {
+    font-size: 20px;
+    color: red;
+    position: absolute;
+}
+
+.slick-initialized .slick-slide {
+    margin: 0 10px;
+} */
+
+#content .content-section {
+    width: 800px;
+    /* tự động đẩy ra giữa */
+    margin-left: auto;
+    margin-right: auto;
+    padding: 64px 0 112px;
+    /* border-radius: 15px; */
+    /* fix tablet */
+    max-width: 100%;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+
+/* Team */
+
+#content .content-section-team-main {
+    background-color: #e7dfd9;
+    width: 100%;
+}
+
+#content .section-heading {
+    text-align: center;
+    font-size: 34px;
+    /* chỉnh độ dày của chữ */
+    font-weight: 505;
+    /* chỉnh khoảng cách các chữ cái */
+    letter-spacing: 4px;
+    font-style: normal;
+    color: rgb(246, 34, 34);
+}
+
+#content .section-sub-heading {
+    text-align: center;
+    font-size: 17px;
+    margin-top: 25px;
+    /* chữ nghiêng */
+    font-style: italic;
+    /* chỉnh độ mờ của chữ */
+    opacity: 0.65;
+}
+
+#content .about-text {
+    font-size: 17px;
+    margin-top: 25px;
+    /* căn đều hai bên */
+    text-align: justify;
+    /* chỉnh độ cao của một dòng */
+    line-height: 1.4;
+}
+
+#content .members-list {
+    margin-top: 32px;
+}
+
+
+/* #content .member-item {
+    c1: display: inline-block;
+    
+    
+    text-align: center;
+    padding-bottom: 16px;
+} */
+
+#content .member-name {
+    font-size: 15px;
+    color: rgb(25, 74, 88);
+    font-weight: bolder;
+}
+
+#content .member-avatar {
+    margin-top: 15px;
+    width: 154px;
+    height: 154px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+
+/* tour section */
+
+.tour-section {
+    background-color: rgb(146, 139, 139);
+}
+
+.ticket-list {
+    /* bo hieu ung cua the li */
+    list-style: none;
+    background-color: white;
+    margin-top: 40px;
+    /* border-radius: 15px; */
+}
+
+.ticket-list li {
+    font-size: 15px;
+    padding: 11px 16px;
+    border-bottom: 2px solid #ddd;
+    color: #757575;
+}
+
+.ticket-list .sold-out {
+    background-color: #f44336;
+    color: white;
+    padding: 3.5px 4px;
+    margin-left: 16px;
+    border-radius: 15px;
+}
+
+.ticket-list .quantity {
+    float: right;
+    width: 25px;
+    height: 25px;
+    background-color: black;
+    color: white;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 25px;
+    margin-bottom: 3px;
+    /* hinh tron */
+}
+
+
+/* places */
+
+.places-list {
+    margin-top: 16px;
+    /* margin-left: -8px;
+    margin-right: -8px; */
+    /* padding-bottom: 48px; */
+}
+
+.place-img {
+    width: 100%;
+    display: block;
+}
+
+.place-body {
+    background-color: white;
+    padding: 16px;
+    /* font-size co tinh ke thua */
+    font-size: 15px;
+}
+
+.place-heading {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.place-time {
+    margin-top: 15px;
+    color: #757575;
+}
+
+.place-desc {
+    margin-top: 15px;
+    line-height: 1.4;
+}
+
+.place-buy-btn {
+    color: white;
+    background-color: black;
+    text-decoration: none;
+    padding: 11px 16px;
+    display: inline-block;
+    /*khong de block vi block ke thua het chieu ngang cua the cha (body)  */
+    margin-top: 15px;
+    /* text-align: center; */
+    /* the input,button tu dong co text-align la center (chi co the a k co) */
+    appearance: none;
+    /* chomme */
+    -webkit-appearance: none;
+    /* webkit */
+}
+
+.place-img:hover {
+    opacity: 0.7;
+}
+
+.place-buy-btn:hover {
+    color: black;
+    background-color: rgb(237, 121, 121);
+}
+
+
+/* contact section */
+
+.other-section-for-all {
+    background-color: rgb(221, 228, 231);
+}
+
+.contact-content {
+    height: 115px;
+    margin-top: 48px;
+}
+
+.contact-info {
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.contact-info i[class*="ti-"] {
+    width: 30px;
+    display: inline-block;
+}
+
+.contact-form {
+    font-size: 15px;
+}
+
+.contact-form .form-control {
+    padding: 5px;
+    border: 1px solid #ccc;
+    width: 100%;
+}
+
+.contact-form .formSubmit {
+    background-color: black;
+    color: white;
+    border: 1px solid #ccc;
+    padding: 10px 16px;
+    float: right;
+    /* bo outline mac ding cua the input */
+    outline: none;
+}
+
+.contact-form .formSubmit:hover {
+    background-color: #f44336;
+    color: black;
+}
+
+
+/* map section */
+
+.map-section {
+    width: 100%;
+    height: 741.2px;
+}
+
+.map-VN {
+    width: 100%;
+    height: 741.2px;
+}
+
+
+/* footer section */
+
+#footer {
+    background-color: white;
+    padding: 64px 16px;
+    text-align: center;
+}
+
+#footer .copyright {
+    font-size: 24px;
+    margin-top: 15px;
+    color: rgba(0, 0, 0, 0.8);
+}
+
+#footer .copyright a {
+    text-decoration: none;
+    color: rgba(49, 15, 172, 0.8);
+}
+
+#footer .social-list a {
+    color: rgba(0, 0, 0, 0.8);
+    text-decoration: none;
+    font-size: 24px;
+    margin: 10px;
+}
+
+#footer .social-list .ti-facebook:hover {
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 27px;
+}
+
+#footer .social-list .ti-instagram:hover {
+    font-size: 27px;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+#footer .social-list .ti-youtube:hover {
+    font-size: 27px;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+#footer .social-list .ti-pinterest:hover {
+    font-size: 27px;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+#footer .social-list .ti-linkedin:hover {
+    font-size: 27px;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+#footer .social-list .ti-github:hover {
+    font-size: 27px;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.modal.open {
+    display: flex;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+.modal-container {
+    background: white;
+    width: 900px;
+    min-height: 200px;
+    position: relative;
+    max-width: calc(100% - 40px);
+    /* tao animation */
+    animation: identifier-show ease 1s;
+}
+
+.modal-close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: white;
+    padding: 12px;
+}
+
+.modal-header {
+    background-color: #009688;
+    height: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    color: white;
+}
+
+.modal-icon-bag {
+    margin-right: 16px;
+}
+
+.modal-body {
+    padding: 16px;
+}
+
+.modal-label {
+    display: block;
+    /* moi thang nam tren 1 hang rieng biet */
+    size: 15px;
+    margin-bottom: 12px;
+}
+
+.modal-input {
+    border: 1px solid #ccc;
+    width: 100%;
+    font-size: 15px;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+#buy-ticket {
+    background-color: #009688;
+    border: none;
+    color: white;
+    width: 100%;
+    text-transform: uppercase;
+    padding: 18px;
+}
+
+#buy-ticket:hover {
+    cursor: pointer;
+    opacity: 0.85;
+    font-size: 19px;
+}
+
+.modal-footer {
+    padding: 16px;
+    text-align: right;
+    color: #2196F3;
+}
+
+.modal-footer a {
+    color: #2196F3;
+}
+
+.modal-close:hover {
+    color: rgb(43, 2, 2);
+    cursor: pointer;
+    font-size: 24px;
+}
+
+@keyframes identifier-show {
+    from {
+        opacity: 0;
+        transform: translateY(-150px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* @keyframes identifier-exit {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    
+    to {
+        opacity: 0;
+        transform: translateY(-150px);
+    }
+} */
