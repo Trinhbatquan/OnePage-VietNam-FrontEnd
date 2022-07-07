@@ -227,7 +227,7 @@ html {
     margin-top: var(--height); */
     height: 500px;
     width: 100%;
-    background-image: url('../img/places/place6.jpg');
+    background-image: url('../img/places/place7.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
@@ -281,13 +281,28 @@ html {
     text-shadow: 0 0 2px black;
 }
 
-.slider1 .text-content,
+.slider1 .text-content {
+    position: absolute;
+    bottom: 15px;
+    color: rgb(199, 224, 231);
+    left: 50%;
+    transform: translateX(-50%);
+}
+
 .slider4 .text-content {
     position: absolute;
     bottom: 15px;
     color: rgb(199, 224, 231);
     left: 50%;
     transform: translateX(-50%);
+}
+
+.slider4 .text-description {
+    margin-top: 25px;
+    font-size: 13px;
+    font-weight: bolder;
+    margin-left: -4px;
+    text-shadow: 0 0 2px #000;
 }
 
 .slider1 .text-heading,
@@ -300,9 +315,15 @@ html {
     font-family: "Segoe UI", Arial, sans-serif;
 }
 
-.slider1 .text-description,
-.slider2 .text-description,
-.slider4 .text-description {
+.slider1 .text-description {
+    margin-top: 25px;
+    font-size: 13px;
+    font-weight: bolder;
+    margin-left: 29px;
+    text-shadow: 0 0 2px #000;
+}
+
+.slider2 .text-description {
     margin-top: 25px;
     font-size: 13px;
     font-weight: bolder;
