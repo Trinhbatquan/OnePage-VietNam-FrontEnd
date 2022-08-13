@@ -88,16 +88,20 @@ html {
     opacity: 0.8;
     z-index: 1;
     /* overflow: hidden; */
+    display: flex;
 }
 
 #heading {
-    display: inline-block;
+    display: flex;
+    flex: 1;
+    /* display: inline-block; */
     /*cùng 1 hàng + k kế thừa chiều ngang của header nên heading có
                         chiều ngang = tổng chiều ngang của các thẻ li */
 }
 
 #heading li {
-    display: inline-block;
+    display: flex;
+    /* display: inline-block; */
     /*cùng 1 hàng nhưng không kế thừa chiều ngang của heading vì vậy
                         ở đây mỗi thẻ li đều có chiều ngang = chiều ngang của vật thể*/
     position: relative;
@@ -105,11 +109,12 @@ html {
 
 #heading .subHeading {
     min-width: 200px;
+    /* cố định chiều width của subHeading vì nếu không subHeading ăn theo chiều dì của thẻ More */
     display: none;
     /* margin: 2px; */
-    margin-top: 1px;
+   
     background-color: white;
-    border-radius: 15px;
+   
     position: absolute;
     /* cố định top va left của subHeading so voi More dùng apsolute */
     top: 100%;
@@ -119,9 +124,9 @@ html {
 }
 
 #heading .subHeading li {
-    width: 100%;
+    /* width: 100%; */
     /* display:block để li ở subHeading kế thừa hết chiều ngang của subHeading */
-    padding: 0 0 0 1px;
+    /* padding: 0 0 0 1px; */
     height: 38px;
 }
 
@@ -137,24 +142,24 @@ html {
 }
 
 #heading li a {
-    display: inline-block;
+    /* display: inline-block; */
     /* height(a) == height(li) */
     text-decoration: none;
     line-height: var(--height);
     padding: 0 24px;
-    font-size: 18px;
+    font-size: 15px;
 }
 
 #heading>li:hover>a {
     background-color: #ccc;
-    border-radius: 15px;
+   
     color: black;
-    font-size: 22px;
+    font-size: 15px;
 }
 
 #heading .subHeading li:hover {
     background-color: rgb(245, 116, 116);
-    border-radius: 15px;
+    
 }
 
 #heading li:hover .subHeading {
@@ -168,7 +173,7 @@ html {
 }
 
 #heading li:hover .buttonDownAngle {
-    font-size: 18px;
+    font-size: 16px;
 }
 
 #header .mobile-menu-btn {
@@ -181,14 +186,17 @@ html {
 #header .mobile-menu-btn,
 #header .buttonSearch {
     /* dieu chinh weight của buttonSearch */
-    float: right;
+    /* float: right; */
+    /* display: flex; 
+     justify-content: flex-end;
+    flex: 1; */
     padding: 0 21px;
-    border-radius: 15px;
+   
 }
 
 #header .mobile-menu-btn:hover .menu-icon,
 #header .buttonSearch:hover .buttonTi-search {
-    font-size: 24px;
+    font-size: 15px;
     color: black;
 }
 
@@ -204,7 +212,7 @@ html {
 #header .menu-icon,
 #header .buttonTi-search {
     color: white;
-    font-size: 20px;
+    font-size: 15px;
     line-height: 46px;
 }
 
@@ -214,8 +222,10 @@ html {
 .slider1 {
     /* --height: 46px;
     margin-top: var(--height); */
+    /* padding-top: 50%; */
     height: 500px;
     width: 100%;
+    /* margin: 50%; */
     background-image: url('../img/places/background1.jpg');
     background-repeat: no-repeat;
     background-size: cover;
